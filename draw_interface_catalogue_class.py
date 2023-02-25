@@ -791,7 +791,7 @@ class DrawInterfaceCatalogue:
     
         
 if __name__ == "__main__":
-    file = 'files/all_patterns.csv'
+    file = 'files/test.csv'
     group = ""
     config = "config/default_config.json"
     mapping = "mapping/default_mapping.json"
