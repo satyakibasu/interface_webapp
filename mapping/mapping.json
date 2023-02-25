@@ -1,0 +1,16 @@
+{
+"data_flow_group_id": "data_flow_group_id",
+"data_flow_group_name": "data_flow_group",
+"sequence_group_id": "sequence_group",
+"from_node": "from_sys",
+"from_node_id": "from_nar_id",
+"from_node_other": "from_is_db_sys",
+"input_to_main_flow": "input_to_flow",
+"to_node": "to_sys",
+"to_node_id": "to_nar_id",
+"to_node_other": "to_is_db_sys",
+"interface_id": "JIRA ID",
+"description": "Description",
+"protocol": "Protocol",
+"reverse_flow":"reverse_flow"
+}   

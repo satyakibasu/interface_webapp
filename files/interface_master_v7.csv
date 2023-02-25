@@ -1,0 +1,11 @@
+data_flow_group,sequence_group,from_sys,from_nar_id,from_is_db_sys,input_to_flow,to_sys,to_nar_id,to_is_db_sys,JIRA ID,Description,Protocol,reverse_flow
+fin_fpsl_grp,100,wk passport,171382-1,N,N,DBX,171140-1,Y,INT-1234,test,sftp,Y
+fin_fpsl_grp,100,DBX,171382-1,Y,N,starc,171140-1,N,INT-1234,r,sftp,Y
+fin_fpsl_grp,200,SAP,171382-1,N,Y,DBX,171140-1,Y,INT-1234,r,sftp,N
+fin_fpsl_grp,400,highbond,171382-1,N,N,emp daas,171140-1,N,INT-1234,r,sftp,N
+fin_fpsl_grp,400,emp daas,171382-1,N,Y,starc,171140-1,N,INT-1234,r,sftp,N
+hrgrp,500,eRDS,171382-1,Y,N,emp daas,171140-1,N,INT-1234,test,sftp,N
+hrgrp,500,emp daas,171382-1,N,N,Streamsets,171140-1,N,INT-1234,r,sftp,N
+hrgrp,500,Streamsets,171382-1,N,N,DBX,171140-1,Y,INT-1234,r,sftp,N
+hrgrp,500,DBX,171382-1,Y,N,SAP,171140-1,N,INT-1234,r,sftp,N
+hrgrp,600,Party DaaS,171382-1,N,Y,Streamsets,171140-1,N,INT-1234,r,sftp,N

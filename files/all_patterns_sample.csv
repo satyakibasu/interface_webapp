@@ -1,0 +1,79 @@
+data_flow_group,sequence_group,from_sys,from_nar_id,from_is_db_sys,input_to_flow,to_sys,to_nar_id,to_is_db_sys,JIRA ID,Description,Protocol,reverse_flow
+test_grp_0,400,Customer System,171382-1,N,N,SAP,171140-1,N,INT-1234,Simple flow,sftp,Y
+test_grp_1,500,Customer System,171382-1,N,N,Middleware System,171140-1,Y,INT-1234,Simple sequence flow,sftp,N
+test_grp_1,500,Middleware System,171382-1,Y,N,SAP,171140-1,N,INT-1234,Simple sequence flow,sftp,N
+test_grp_2,600,Customer System,171382-1,N,N,Middleware System,171140-1,Y,INT-1234,Simple sequence flow with input from another application to main flow,sftp,N
+test_grp_2,600,Middleware System,171382-1,Y,N,SAP,171140-1,N,INT-1234,Simple sequence flow with input from another application to main flow,sftp,N
+test_grp_2,700,HR System,171382-1,N,Y,Middleware System,171140-1,Y,INT-1234,Simple sequence flow with input from another application to main flow,sftp,N
+test_grp_3,800,Customer System,171382-1,N,N,Middleware System,171140-1,Y,INT-1234,multiple applications input to main flow in diff applications,sftp,N
+test_grp_3,800,Middleware System,171382-1,Y,N,SAP,171140-1,N,INT-1234,multiple applications input to main flow in diff applications,sftp,N
+test_grp_3,900,HR System,171382-1,N,Y,Middleware System,171140-1,Y,INT-1234,multiple applications input to main flow in diff applications,sftp,N
+test_grp_3,1000,Product Master,171382-1,N,Y,SAP,171140-1,N,INT-1234,multiple applications input to main flow in diff applications,sftp,N
+test_grp_4,1100,Customer System,171382-1,N,N,Middleware System,171140-1,Y,INT-1234,Two main sequence flow with one of them input to the other flow at diff applications,sftp,N
+test_grp_4,1100,Middleware System,171382-1,Y,N,SAP,171140-1,N,INT-1234,Two main sequence flow with one of them input to the other flow at diff applications,sftp,N
+test_grp_4,1200,HR System,171382-1,N,N,Product Master,171140-1,Y,INT-1234,Two main sequence flow with one of them input to the other flow at diff applications,sftp,N
+test_grp_4,1200,Product Master,171382-1,N,Y,SAP,171140-1,N,INT-1234,Two main sequence flow with one of them input to the other flow at diff applications,sftp,N
+test_grp_5,100,Customer System,171382-1,N,N,Middleware System,171140-1,Y,INT-1234,multiple applications input to main flow in diff applications,sftp,N
+test_grp_5,100,Middleware System,171382-1,Y,N,Compliance System,171140-1,N,INT-1234,multiple applications input to main flow in diff applications,sftp,N
+test_grp_5,100,Compliance System,171382-1,Y,N,Credit System,171140-1,N,INT-1234,multiple applications input to main flow in diff applications,sftp,N
+test_grp_5,200,SAP,171382-1,N,N,Middleware System,171140-1,Y,INT-1234,multiple applications input to main flow in diff applications,sftp,N
+test_grp_5,200,Middleware System,171382-1,N,Y,Compliance System,171140-1,N,INT-1234,multiple applications input to main flow in diff applications,sftp,N
+test_grp_5,500,Legal System,171382-1,N,N,Risk System,171140-1,N,INT-1234,multiple applications input to main flow in diff applications,sftp,N
+test_grp_5,500,Risk System,171382-1,N,Y,Compliance System,171140-1,N,INT-1234,multiple applications input to main flow in diff applications,sftp,N
+test_grp_5,600,Employee,171382-1,N,N,ETL,171140-1,N,INT-1234,multiple applications input to main flow in diff applications,sftp,N
+test_grp_5,600,ETL,171382-1,N,Y,Credit System,171140-1,N,INT-1234,multiple applications input to main flow in diff applications,sftp,N
+test_grp_6,100,Customer System,171382-1,N,N,Middleware System,171140-1,N,INT-1234,multiple applications input to main flow in diff applications,sftp,N
+test_grp_6,100,Middleware System,171382-1,N,N,SAP,171140-1,N,INT-1234,multiple applications input to main flow in diff applications,sftp,N
+test_grp_6,100,SAP,171382-1,N,N,Risk System,171140-1,N,INT-1234,multiple applications input to main flow in diff applications,sftp,N
+test_grp_6,100,Risk System,171382-1,N,N,Order System,171140-1,N,INT-1234,multiple applications input to main flow in diff applications,sftp,N
+test_grp_6,200,Customer System,171382-1,N,N,Middleware System,171140-1,N,INT-1234,multiple applications input to main flow in diff applications,sftp,N
+test_grp_6,200,Middleware System,171382-1,N,N,SAP,171140-1,N,INT-1234,multiple applications input to main flow in diff applications,sftp,N
+test_grp_6,200,SAP,171382-1,N,N,MNP,171140-1,N,INT-1234,multiple applications input to main flow in diff applications,sftp,N
+test_grp_6,200,MNP,171382-1,N,Y,Order System,171140-1,N,INT-1234,multiple applications input to main flow in diff applications,sftp,N
+test_grp_6,300,Middleware System,171382-1,N,N,SAP,171140-1,N,INT-1234,multiple applications input to main flow in diff applications,sftp,N
+test_grp_6,300,SAP,171382-1,N,N,MNP,171140-1,N,INT-1234,multiple applications input to main flow in diff applications,sftp,N
+test_grp_6,300,MNP,171382-1,N,N,Reporting System,171140-1,N,INT-1234,multiple applications input to main flow in diff applications,sftp,N
+test_grp_6,300,Reporting System,171382-1,N,Y,Order System,171140-1,N,INT-1234,multiple applications input to main flow in diff applications,sftp,N
+test_grp_comp,100,Customer System,171382-1,N,N,Middleware System,171140-1,Y,INT-1234,complex flow,sftp,N
+test_grp_comp,100,Middleware System,171382-1,Y,N,Compliance System,171140-1,N,INT-1234,complex flow,sftp,N
+test_grp_comp,100,Compliance System,171382-1,Y,N,Credit System,171140-1,N,INT-1234,complex flow,sftp,N
+test_grp_comp,200,SAP,171382-1,N,N,Middleware System,171140-1,Y,INT-1234,complex flow,sftp,N
+test_grp_comp,200,Middleware System,171382-1,N,Y,Compliance System,171140-1,N,INT-1234,complex flow,sftp,N
+test_grp_comp,500,Employee,171382-1,N,N,ETL,171140-1,N,INT-1234,complex flow,sftp,N
+test_grp_comp,500,ETL,171382-1,N,Y,Credit System,171140-1,N,INT-1234,complex flow,sftp,N
+test_grp_comp,600,Legal System,171382-1,N,N,Risk System,171140-1,N,INT-1234,complex flow,sftp,N
+test_grp_comp,600,Risk System,171382-1,N,Y,Compliance System,171140-1,N,INT-1234,complex flow,sftp,N
+test_grp_comp,700,Reference Master,171382-1,N,N,Datawarhouse,171140-1,Y,INT-1234,complex flow,sftp,N
+test_grp_comp,700,Datawarhouse,171382-1,Y,Y,Credit System,171140-1,N,INT-1234,complex flow,sftp,N
+test_grp_comp,1000,MNP,171382-1,N,N,Order System,171140-1,N,INT-1234,multiple applications input to main flow in diff applications,sftp,N
+test_grp_comp,1000,Order System,171382-1,N,N,SAP,171140-1,N,INT-1234,multiple applications input to main flow in diff applications,sftp,N
+test_grp_comp,1000,SAP,171382-1,N,N,MNP,171140-1,N,INT-1234,multiple applications input to main flow in diff applications,sftp,N
+test_grp_comp,1000,Reporting System,171382-1,N,Y,Credit System,171140-1,N,INT-1234,multiple applications input to main flow in diff applications,sftp,N
+test_grp_comp,1200,Reporting System,171382-1,N,Y,Compliance System,171140-1,N,INT-1234,complex flow,sftp,N
+test_grp_comp,1300,Order System,171382-1,N,Y,Credit System,171140-1,N,INT-1234,complex flow,sftp,N
+test_grp_comp2,100,Customer System,171382-1,N,N,Middleware System,171140-1,Y,INT-1234,complex flow,sftp,N
+test_grp_comp2,100,Middleware System,171382-1,Y,N,Compliance System,171140-1,N,INT-1234,complex flow,sftp,N
+test_grp_comp2,100,Compliance System,171382-1,Y,N,Credit System,171140-1,N,INT-1234,complex flow,sftp,N
+test_grp_comp2,200,SAP,171382-1,N,N,Middleware System,171140-1,Y,INT-1234,complex flow,sftp,N
+test_grp_comp2,200,Middleware System,171382-1,N,Y,Compliance System,171140-1,N,INT-1234,complex flow,sftp,N
+test_grp_comp2,500,Employee,171382-1,N,N,ETL,171140-1,N,INT-1234,complex flow,sftp,N
+test_grp_comp2,500,ETL,171382-1,N,Y,Credit System,171140-1,N,INT-1234,complex flow,sftp,N
+test_grp_comp2,600,Legal System,171382-1,N,N,Risk System,171140-1,N,INT-1234,complex flow,sftp,N
+test_grp_comp2,600,Risk System,171382-1,N,Y,Compliance System,171140-1,N,INT-1234,complex flow,sftp,N
+test_grp_comp2,700,Reference Master,171382-1,N,N,Datawarhouse,171140-1,Y,INT-1234,complex flow,sftp,N
+test_grp_comp2,700,Datawarhouse,171382-1,Y,N,Payroll System,171140-1,N,INT-1234,complex flow,sftp,N
+test_grp_comp2,700,Payroll System,171382-1,Y,Y,Credit System,171140-1,N,INT-1234,complex flow,sftp,N
+test_grp_comp2,150,Reporting System,171382-1,N,Y,Compliance System,171140-1,N,INT-1234,complex flow,sftp,N
+test_grp_comp2,160,Order System,171382-1,N,Y,Compliance System,171140-1,N,INT-1234,complex flow,sftp,N
+test_grp_comp2,1000,MNP,171382-1,N,N,Order System,171140-1,N,INT-1234,multiple applications input to main flow in diff applications,sftp,N
+test_grp_comp2,1000,Order System,171382-1,N,N,SAP,171140-1,N,INT-1234,multiple applications input to main flow in diff applications,sftp,N
+test_grp_comp2,1000,SAP,171382-1,N,N,MNP,171140-1,N,INT-1234,multiple applications input to main flow in diff applications,sftp,N
+test_grp_comp2,1000,MNP,171382-1,N,N,Reporting System,171140-1,N,INT-1234,multiple applications input to main flow in diff applications,sftp,N
+test_grp_comp2,1000,Reporting System,171382-1,N,Y,Credit System,171140-1,N,INT-1234,multiple applications input to main flow in diff applications,sftp,N
+test_grp_comp3,100,Customer System,171382-1,N,N,Middleware System,171140-1,Y,INT-1234,one of the inputs is also part of the mainflow with the same name,sftp,Y
+test_grp_comp3,100,Middleware System,171382-1,Y,N,Compliance System,171140-1,N,INT-1234,complex flow,sftp,Y
+test_grp_comp3,100,Compliance System,171382-1,Y,N,Credit System,171140-1,N,INT-1234,complex flow,sftp,Y
+test_grp_comp3,1200,Reporting System,171382-1,N,Y,Compliance System,171140-1,N,INT-1234,complex flow,sftp,N
+test_grp_comp3,1300,Order System,171382-1,N,Y,Middleware System,171140-1,N,INT-1234,complex flow,sftp,N
+test_grp_comp3,200,SAP,171382-1,N,N,Middleware System,171140-1,Y,INT-1234,complex flow,sftp,N
+test_grp_comp3,200,Middleware System,171382-1,N,Y,Compliance System,171140-1,N,INT-1234,complex flow,sftp,N

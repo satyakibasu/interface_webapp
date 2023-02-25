@@ -1,0 +1,2 @@
+data_flow_group,sequence_group,from_sys,from_nar_id,from_is_db_sys,input_to_flow,to_sys,to_nar_id,to_is_db_sys,JIRA ID,Description,Protocol,reverse_flow
+<<func name>>,100,<<system 1>>,<<node id 1>>,N,N,<<system 2>>,<<node id 2>>,N,<<interface id>>,r,<<protocol>>,N

@@ -1,0 +1,11 @@
+{
+    "width_of_rec" :	2,
+    "height_of_rec" :	60,
+    "dist_between_from_to_box" : 100,
+    "dist_between_from_box" :	50,
+    "init_x" : 100,
+    "init_y" : 40
+}
+
+
+

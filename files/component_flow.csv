@@ -1,0 +1,12 @@
+data_flow_group,sequence_group,from_sys,from_nar_id,from_is_db_sys,input_to_flow,to_sys,to_nar_id,to_is_db_sys,JIRA ID,Description,Protocol,reverse_flow
+draw_interface_func,100,init(),171382-1,N,N,draw_image(),171140-1,Y,INT-1234,r,sftp,N
+draw_interface_func,100,draw_image(),171382-1,N,N,generate_coordinates(),171140-1,Y,INT-1234,r,sftp,N
+draw_interface_func,100,generate_coordinates(),171382-1,N,N,set_coordinates(),171140-1,Y,INT-1234,r,sftp,N
+draw_interface_func,100,set_coordinates(),171382-1,N,N,set_other_coordinates(),171140-1,Y,INT-1234,r,sftp,N
+draw_interface_func,100,set_other_coordinates(),171382-1,N,N,check_sequence_group_new(),171140-1,Y,INT-1234,r,sftp,N
+draw_interface_func,100,check_sequence_group_new(),171382-1,N,N,check_input_to_group_new(),171140-1,Y,INT-1234,r,sftp,N
+draw_interface_func,100,check_input_to_group_new(),171382-1,N,N,reduce_gap_between_boxes(),171140-1,Y,INT-1234,r,sftp,N
+draw_interface_func,100,reduce_gap_between_boxes(),171382-1,N,N,reduce_gap_group(),171140-1,Y,INT-1234,r,sftp,N
+draw_interface_func,100,reduce_gap_group(),171382-1,N,N,set_other_coordinates(),171140-1,Y,INT-1234,r,sftp,N
+draw_interface_func,100,set_other_coordinates(),171382-1,N,N,generate_diagram(),171140-1,Y,INT-1234,r,sftp,N
+draw_interface_func,100,generate_diagram(),171382-1,N,N,show(),171140-1,Y,INT-1234,r,sftp,N

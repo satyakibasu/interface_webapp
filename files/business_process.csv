@@ -1,0 +1,4 @@
+data_flow_group,sequence_group,from_sys,from_nar_id,from_is_db_sys,input_to_flow,to_sys,to_nar_id,to_is_db_sys,JIRA ID,Description,Protocol,reverse_flow
+order_process,100,Display Customer Form,171382-1,N,N,Validate Customer Form,171140-1,N,INT-1234,r,sftp,N
+order_process,100,Validate Customer Form,171382-1,N,N,Perform Credit Risk,171140-1,N,INT-1234,r,sftp,N
+order_process,200,Get Credit Risk for Customer,171382-1,Y,Y,Perform Credit Risk,171140-1,N,INT-1234,r,sftp,N

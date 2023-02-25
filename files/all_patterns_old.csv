@@ -1,0 +1,79 @@
+data_flow_group,sequence_group,from_sys,from_nar_id,from_is_db_sys,input_to_flow,to_sys,to_nar_id,to_is_db_sys,JIRA ID,Description,Protocol,reverse_flow
+test_grp_0,400,wk passport,171382-1,N,N,SAP,171140-1,N,INT-1234,Simple flow,sftp,Y
+test_grp_1,500,wk passport,171382-1,N,N,DBX,171140-1,Y,INT-1234,Simple sequence flow,sftp,N
+test_grp_1,500,DBX,171382-1,Y,N,SAP,171140-1,N,INT-1234,Simple sequence flow,sftp,N
+test_grp_2,600,wk passport,171382-1,N,N,DBX,171140-1,Y,INT-1234,Simple sequence flow with input from another application to main flow,sftp,N
+test_grp_2,600,DBX,171382-1,Y,N,SAP,171140-1,N,INT-1234,Simple sequence flow with input from another application to main flow,sftp,N
+test_grp_2,700,emp daas,171382-1,N,Y,DBX,171140-1,Y,INT-1234,Simple sequence flow with input from another application to main flow,sftp,N
+test_grp_3,800,wk passport,171382-1,N,N,DBX,171140-1,Y,INT-1234,multiple applications input to main flow in diff applications,sftp,N
+test_grp_3,800,DBX,171382-1,Y,N,SAP,171140-1,N,INT-1234,multiple applications input to main flow in diff applications,sftp,N
+test_grp_3,900,emp daas,171382-1,N,Y,DBX,171140-1,Y,INT-1234,multiple applications input to main flow in diff applications,sftp,N
+test_grp_3,1000,product daas,171382-1,N,Y,SAP,171140-1,N,INT-1234,multiple applications input to main flow in diff applications,sftp,N
+test_grp_4,1100,wk passport,171382-1,N,N,DBX,171140-1,Y,INT-1234,Two main sequence flow with one of them input to the other flow at diff applications,sftp,N
+test_grp_4,1100,DBX,171382-1,Y,N,SAP,171140-1,N,INT-1234,Two main sequence flow with one of them input to the other flow at diff applications,sftp,N
+test_grp_4,1200,emp daas,171382-1,N,N,product daas,171140-1,Y,INT-1234,Two main sequence flow with one of them input to the other flow at diff applications,sftp,N
+test_grp_4,1200,product daas,171382-1,N,Y,SAP,171140-1,N,INT-1234,Two main sequence flow with one of them input to the other flow at diff applications,sftp,N
+test_grp_5,100,wk passport,171382-1,N,N,DBX,171140-1,Y,INT-1234,multiple applications input to main flow in diff applications,sftp,N
+test_grp_5,100,DBX,171382-1,Y,N,starc,171140-1,N,INT-1234,multiple applications input to main flow in diff applications,sftp,N
+test_grp_5,100,starc,171382-1,Y,N,erds,171140-1,N,INT-1234,multiple applications input to main flow in diff applications,sftp,N
+test_grp_5,200,SAP,171382-1,N,N,DBX,171140-1,Y,INT-1234,multiple applications input to main flow in diff applications,sftp,N
+test_grp_5,200,DBX,171382-1,N,Y,starc,171140-1,N,INT-1234,multiple applications input to main flow in diff applications,sftp,N
+test_grp_5,500,Sys1,171382-1,N,N,Sys2,171140-1,N,INT-1234,multiple applications input to main flow in diff applications,sftp,N
+test_grp_5,500,Sys2,171382-1,N,Y,starc,171140-1,N,INT-1234,multiple applications input to main flow in diff applications,sftp,N
+test_grp_5,600,Employee,171382-1,N,N,Streamset,171140-1,N,INT-1234,multiple applications input to main flow in diff applications,sftp,N
+test_grp_5,600,Streamset,171382-1,N,Y,erds,171140-1,N,INT-1234,multiple applications input to main flow in diff applications,sftp,N
+test_grp_6,100,wk passport,171382-1,N,N,DBX,171140-1,N,INT-1234,multiple applications input to main flow in diff applications,sftp,N
+test_grp_6,100,DBX,171382-1,N,N,SAP,171140-1,N,INT-1234,multiple applications input to main flow in diff applications,sftp,N
+test_grp_6,100,SAP,171382-1,N,N,hibond,171140-1,N,INT-1234,multiple applications input to main flow in diff applications,sftp,N
+test_grp_6,100,hibond,171382-1,N,N,XYZ,171140-1,N,INT-1234,multiple applications input to main flow in diff applications,sftp,N
+test_grp_6,200,wk passport,171382-1,N,N,DBX,171140-1,N,INT-1234,multiple applications input to main flow in diff applications,sftp,N
+test_grp_6,200,DBX,171382-1,N,N,SAP,171140-1,N,INT-1234,multiple applications input to main flow in diff applications,sftp,N
+test_grp_6,200,SAP,171382-1,N,N,MNP,171140-1,N,INT-1234,multiple applications input to main flow in diff applications,sftp,N
+test_grp_6,200,MNP,171382-1,N,Y,XYZ,171140-1,N,INT-1234,multiple applications input to main flow in diff applications,sftp,N
+test_grp_6,300,DBX,171382-1,N,N,SAP,171140-1,N,INT-1234,multiple applications input to main flow in diff applications,sftp,N
+test_grp_6,300,SAP,171382-1,N,N,MNP,171140-1,N,INT-1234,multiple applications input to main flow in diff applications,sftp,N
+test_grp_6,300,MNP,171382-1,N,N,ABC,171140-1,N,INT-1234,multiple applications input to main flow in diff applications,sftp,N
+test_grp_6,300,ABC,171382-1,N,Y,XYZ,171140-1,N,INT-1234,multiple applications input to main flow in diff applications,sftp,N
+test_grp_comp,100,wk passport,171382-1,N,N,DBX,171140-1,Y,INT-1234,complex flow,sftp,N
+test_grp_comp,100,DBX,171382-1,Y,N,starc,171140-1,N,INT-1234,complex flow,sftp,N
+test_grp_comp,100,starc,171382-1,Y,N,erds,171140-1,N,INT-1234,complex flow,sftp,N
+test_grp_comp,200,SAP,171382-1,N,N,DBX,171140-1,Y,INT-1234,complex flow,sftp,N
+test_grp_comp,200,DBX,171382-1,N,Y,starc,171140-1,N,INT-1234,complex flow,sftp,N
+test_grp_comp,500,Employee,171382-1,N,N,Streamset,171140-1,N,INT-1234,complex flow,sftp,N
+test_grp_comp,500,Streamset,171382-1,N,Y,erds,171140-1,N,INT-1234,complex flow,sftp,N
+test_grp_comp,600,Sys1,171382-1,N,N,Sys2,171140-1,N,INT-1234,complex flow,sftp,N
+test_grp_comp,600,Sys2,171382-1,N,Y,starc,171140-1,N,INT-1234,complex flow,sftp,N
+test_grp_comp,700,Ss,171382-1,N,N,ss2,171140-1,Y,INT-1234,complex flow,sftp,N
+test_grp_comp,700,ss2,171382-1,Y,Y,erds,171140-1,N,INT-1234,complex flow,sftp,N
+test_grp_comp,1000,MNP,171382-1,N,N,XYZ,171140-1,N,INT-1234,multiple applications input to main flow in diff applications,sftp,N
+test_grp_comp,1000,XYZ,171382-1,N,N,SAP,171140-1,N,INT-1234,multiple applications input to main flow in diff applications,sftp,N
+test_grp_comp,1000,SAP,171382-1,N,N,MNP,171140-1,N,INT-1234,multiple applications input to main flow in diff applications,sftp,N
+test_grp_comp,1000,ABC,171382-1,N,Y,erds,171140-1,N,INT-1234,multiple applications input to main flow in diff applications,sftp,N
+test_grp_comp,1200,ABC,171382-1,N,Y,starc,171140-1,N,INT-1234,complex flow,sftp,N
+test_grp_comp,1300,XYZ,171382-1,N,Y,erds,171140-1,N,INT-1234,complex flow,sftp,N
+test_grp_comp2,100,wk passport,171382-1,N,N,DBX,171140-1,Y,INT-1234,complex flow,sftp,N
+test_grp_comp2,100,DBX,171382-1,Y,N,starc,171140-1,N,INT-1234,complex flow,sftp,N
+test_grp_comp2,100,starc,171382-1,Y,N,erds,171140-1,N,INT-1234,complex flow,sftp,N
+test_grp_comp2,200,SAP,171382-1,N,N,DBX,171140-1,Y,INT-1234,complex flow,sftp,N
+test_grp_comp2,200,DBX,171382-1,N,Y,starc,171140-1,N,INT-1234,complex flow,sftp,N
+test_grp_comp2,500,Employee,171382-1,N,N,Streamset,171140-1,N,INT-1234,complex flow,sftp,N
+test_grp_comp2,500,Streamset,171382-1,N,Y,erds,171140-1,N,INT-1234,complex flow,sftp,N
+test_grp_comp2,600,Sys1,171382-1,N,N,Sys2,171140-1,N,INT-1234,complex flow,sftp,N
+test_grp_comp2,600,Sys2,171382-1,N,Y,starc,171140-1,N,INT-1234,complex flow,sftp,N
+test_grp_comp2,700,Ss,171382-1,N,N,ss2,171140-1,Y,INT-1234,complex flow,sftp,N
+test_grp_comp2,700,ss2,171382-1,Y,N,klp,171140-1,N,INT-1234,complex flow,sftp,N
+test_grp_comp2,700,klp,171382-1,Y,Y,erds,171140-1,N,INT-1234,complex flow,sftp,N
+test_grp_comp2,150,ABC,171382-1,N,Y,starc,171140-1,N,INT-1234,complex flow,sftp,N
+test_grp_comp2,160,XYZ,171382-1,N,Y,starc,171140-1,N,INT-1234,complex flow,sftp,N
+test_grp_comp2,1000,MNP,171382-1,N,N,XYZ,171140-1,N,INT-1234,multiple applications input to main flow in diff applications,sftp,N
+test_grp_comp2,1000,XYZ,171382-1,N,N,SAP,171140-1,N,INT-1234,multiple applications input to main flow in diff applications,sftp,N
+test_grp_comp2,1000,SAP,171382-1,N,N,MNP,171140-1,N,INT-1234,multiple applications input to main flow in diff applications,sftp,N
+test_grp_comp2,1000,MNP,171382-1,N,N,ABC,171140-1,N,INT-1234,multiple applications input to main flow in diff applications,sftp,N
+test_grp_comp2,1000,ABC,171382-1,N,Y,erds,171140-1,N,INT-1234,multiple applications input to main flow in diff applications,sftp,N
+test_grp_comp3,100,wk passport,171382-1,N,N,DBX,171140-1,Y,INT-1234,one of the inputs is also part of the mainflow with the same name,sftp,Y
+test_grp_comp3,100,DBX,171382-1,Y,N,starc,171140-1,N,INT-1234,complex flow,sftp,Y
+test_grp_comp3,100,starc,171382-1,Y,N,erds,171140-1,N,INT-1234,complex flow,sftp,Y
+test_grp_comp3,1200,ABC,171382-1,N,Y,starc,171140-1,N,INT-1234,complex flow,sftp,N
+test_grp_comp3,1300,XYZ,171382-1,N,Y,DBX,171140-1,N,INT-1234,complex flow,sftp,N
+test_grp_comp3,200,SAP,171382-1,N,N,DBX,171140-1,Y,INT-1234,complex flow,sftp,N
+test_grp_comp3,200,DBX,171382-1,N,Y,starc,171140-1,N,INT-1234,complex flow,sftp,N

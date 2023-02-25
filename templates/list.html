@@ -1,0 +1,68 @@
+<html>
+<head>
+		<title>Display Interfaces list</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style>
+			h3 {
+				font-family: Arial, sans-serif;
+				color: #2e2d2f;
+				text-align: default;
+			}
+			p {
+				font-family: Arial, sans-serif;
+				font-size: 14px;
+				text-align: default;
+				color: #2f2d2d;
+			}
+		</style>
+	</head>
+   <body>
+   <h3>Display list of interfaces diagrams</h3>
+     
+
+     
+     <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Interface Name</th>
+      <th scope="col">Group Name (optional)</th>
+      <th scope="col">Generate diagram?</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+      
+      {% for file in files%}
+      <tr>
+          <form action = "/display" method = "POST" >
+              <td>{{file}}</td>
+              <td><input type="text" name="group"></td>
+              <td><button name = "display" type = "submit" value={{file}}>Yes</button></td>
+              <td><button name = "display_data" type = "submit" value={{file}}>Display Data</button></td>
+               </tr>
+          </form>
+
+      {% endfor %}
+
+     
+     
+</tbody>
+</table>
+<br>
+<table>
+   <tr>
+       <td>Do you want to upload a new file?</td>
+       <td><form action = "/upload" ><button name = "upload" type = "submit" />Yes</button></form> </td>       
+   </tr>
+</table>
+
+{% if image_name %}
+	<div>
+		<img src="{{ url_for('display_image', filename=image_name) }}">
+	</div>
+{% endif %}
+
+
+
+   </body>
+</html>

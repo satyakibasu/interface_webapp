@@ -1,0 +1,16 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Display Contents</title>
+</head>
+<body>
+
+<h1>Display Contents</h1>
+{% for table in tables %}
+            {{ table|safe }}
+{% endfor %}
+</body>
+</html>
+

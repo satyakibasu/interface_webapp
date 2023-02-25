@@ -1,0 +1,13 @@
+pip3 install virtualenv
+ source env/bin/activate
+  153  python -m virtualenv -p="/home/mail2samratbasu/Python-3.6.3/python.exe" myenv
+  154  python -m virtualenv -p="/home/mail2samratbasu/Python-3.6.3/python" myenv
+
+
+touch Dockerfile
+  356  nano Dockerfile
+  357  ls -lrt
+  358  chmod +x Dockerfile
+  359  ls -lrt
+  360  gcloud builds submit --tag gcr.io/my-interface-project/interfacedisplay
+  361  gcloud run deploy --image gcr.io/my-interface-project/interfacedisplay

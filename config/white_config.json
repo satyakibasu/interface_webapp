@@ -1,0 +1,23 @@
+{
+    "background_color":"#ffffff",
+    "width_of_rec" :	200,
+    "height_of_rec" :	60,
+    "dist_between_from_to_box" : 100,
+    "dist_between_from_box" :	50,
+    "init_x_coordinates" : 100,
+    "init_y_coordinates" : 40,
+    "heading_text":"INTERFACE & DATA FLOW DIAGRAM",
+	"heading_text_color":"#000000",
+	"node_color":"#90EE90",
+	"node_text_color":"#000000",
+	"other_node_color":"#00308F",
+	"other_node_text_color":"#FFFFFF",
+	"arrow_color":"#000000",
+	"group_name_color":"#ED872D",
+	"text_color":"#000000",
+	"node_id_color" : "#000080",	
+	"other_node_id_color" : "#FFFFFF"	
+}
+
+
+

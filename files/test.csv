@@ -1,0 +1,8 @@
+my_index,data_flow_group,sequence_group,from_sys,from_nar_id,from_is_db_sys,input_to_flow,to_sys,to_nar_id,to_is_db_sys,JIRA ID,Description,Protocol,reverse_flow,abc,xyz
+0,test_grp_comp2,100,wk passport,171382-1,N,N,DBX,171140-1,Y,INT-1234,complex flow,sftp,Y,d,
+1,test_grp_comp2,100,DBX,171382-1,Y,N,starc,171140-1,N,INT-1234,complex flow,sftp,Y,da,
+2,test_grp_comp2,100,starc,171382-1,Y,N,erds,171140-1,N,INT-1234,complex flow,sftp,Y,d,
+3,test_grp_comp2,1200,ABC,171382-1,N,Y,starc,171140-1,N,INT-1234,complex flow,sftp,N,da,
+4,test_grp_comp2,1300,XYZ,171382-1,N,Y,DBX,171140-1,N,INT-1234,complex flow,sftp,N,,
+5,test_grp_comp2,200,SAP,171382-1,N,N,DBX,171140-1,Y,INT-1234,complex flow,sftp,N,ad,
+6,test_grp_comp2,200,DBX,171382-1,N,Y,starc,171140-1,N,INT-1234,complex flow,sftp,N,,

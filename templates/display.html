@@ -1,0 +1,16 @@
+<html>
+   <body>
+       <h1>Display diagram</h1>
+       Generate Image for file: {{file}} ?
+       (this will open in a new window)
+        <form action = "/display" method = "POST" >
+            <button name = "display" type = "submit" value={{file}} />Yes</button>
+        </form>
+        
+        <form action = "/" >
+            <button name = "display" type = "submit" />No</button>
+        </form>
+        
+        
+   </body>
+</html>
