@@ -4,5 +4,5 @@ my_index,data_flow_group,sequence_group,from_sys,from_nar_id,from_is_db_sys,inpu
 2,test_grp_comp2,01_main_flow,starc,171382-1,Y,N,erds,171140-1,N,INT-1234,complex flow,sftp,Y,d,
 3,test_grp_comp2,02_input_flow,ABC,171382-1,N,Y,starc,171140-1,N,INT-1234,complex flow,sftp,N,da,
 4,test_grp_comp2,03_input_flow,XYZ,171382-1,N,Y,DBX,171140-1,N,INT-1234,complex flow,sftp,N,,
-5,test_grp_comp2,04_input_flow,SAP,171382-1,N,N,DBX,171140-1,Y,INT-1234,complex flow,sftp,N,ad,
+5,test_grp_comp2,04_input_flow,wk passport,171382-1,N,N,DBX,171140-1,Y,INT-1234,complex flow,sftp,N,ad,
 6,test_grp_comp2,04_input_flow,DBX,171382-1,N,Y,starc,171140-1,N,INT-1234,complex flow,sftp,N,,
