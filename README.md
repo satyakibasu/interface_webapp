@@ -1,5 +1,9 @@
 This version has the following changes:
 
+V9.1
+----
+1. Changed the font "arial" to "Arial". There was a compability issue using python 3.9
+
 V9.0
 ----
 1. Introduced a new column - reverse_flow with values as 'Y' or 'N'. 'Y' indicates that the flow is also reversed.
