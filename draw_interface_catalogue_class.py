@@ -163,8 +163,11 @@ class DrawInterfaceCatalogue:
         int_img = Image.new('RGB', (self.IMG_WIDTH, self.IMG_HEIGHT), self.background_color)
         self.draw = ImageDraw.Draw(int_img)
         
-        sig_font = ImageFont.truetype("arial.ttf")
-        heading_font = ImageFont.truetype("arial.ttf",14)
+        sig_font = ImageFont.truetype("Arial.ttf")
+        #sig_font = ImageFont.load_default()
+        
+        heading_font = ImageFont.truetype("Arial.ttf",14)
+        #heading_font = ImageFont.load_default()
         
         #Heading
         signature = "created by: Satyaki Basu (mail2samratbasu@gmail.com)"
@@ -688,7 +691,8 @@ class DrawInterfaceCatalogue:
         to_node_other = row['to_node_other']
         reverse_flow = row['reverse_flow']
     
-        box_font = ImageFont.truetype("arial.ttf")
+        box_font = ImageFont.truetype("Arial.ttf")
+        #box_font = ImageFont.load_default()
         
         #co-ordinates
         from_x0 = row['from_x0']
@@ -799,7 +803,7 @@ if __name__ == "__main__":
     #image = obj.draw_image(coordinates)
     image = obj.draw_image()
     cordinates = obj._cord_df
-    cordinates.to_csv("cord_new.csv")
+    #cordinates.to_csv("cord_new.csv")
 
     image.show()
     

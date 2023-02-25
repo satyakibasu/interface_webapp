@@ -3,13 +3,15 @@ from flask import Flask,request,render_template, redirect, url_for
 from draw_interface_catalogue_class import DrawInterfaceCatalogue
 import os
 import pandas as pd
+
 #from google.cloud import storage
-from PIL import Image
+#from PIL import Image
 
 
 
 
 app = Flask(__name__,static_url_path='/static')
+
 
 @app.route('/')
 def main():
@@ -34,26 +36,37 @@ def upload_file():
 @app.route('/display', methods = ["POST","GET"])
 def display():
     if request.method == 'POST':
-        #form_data = request.form
-        #print(form_data)
+        form_data = request.form
+        print(form_data)
         #print("i am here")
+        
+        
         try:
-            try:
-    
-                group = request.form['group']
-                print("group :", group)
-            except:
-                group = ""
+            
                 
             if request.form['display']:
                 filename = request.form['display']
                 print(filename)
+                config = request.form['color_scheme']
+                
+                groups = request.form.getlist('group')
+                print(set(groups))
+                group_list = list(set(groups))
+                print(group_list)
+                group_list = list(filter(None,group_list))
+                if group_list:
+                    group = group_list[0]
+                else:
+                    group = ""
+        
+                
                 print("group in :",group)
                 f_name = filename.split('.')[0]
                 print(f_name)
-                config = "config/white_config.json"
+                #config = "config/white_config.json"
                 mapping = "mapping/default_mapping.json"
-                obj = DrawInterfaceCatalogue("files/"+filename,group=group, config=config,mapping=mapping)
+                print(config)
+                obj = DrawInterfaceCatalogue("files/"+filename,group=group, config="config/"+config,mapping=mapping)
                 image = obj.draw_image()
                 #image.show()
                 cwd = os.getcwd()

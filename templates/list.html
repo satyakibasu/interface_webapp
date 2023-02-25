@@ -31,18 +31,25 @@
     </tr>
   </thead>
   <tbody>
-      
+      <form action = "/display" method = "POST" >
+          
       {% for file in files%}
       <tr>
-          <form action = "/display" method = "POST" >
               <td>{{file}}</td>
               <td><input type="text" name="group"></td>
               <td><button name = "display" type = "submit" value={{file}}>Yes</button></td>
               <td><button name = "display_data" type = "submit" value={{file}}>Display Data</button></td>
                </tr>
-          </form>
-
+               
+          
       {% endfor %}
+               <input type="radio" id="black" name="color_scheme" value="default_config.json">
+              <label for="black">black</label><br>
+              <input type="radio" id="white" name="color_scheme" value="white_config.json" checked>
+              <label for="white">white</label><br>
+
+
+</form>
 
      
      
