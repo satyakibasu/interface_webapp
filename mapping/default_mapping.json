@@ -11,6 +11,6 @@
 "to_node_other": "to_is_db_sys",
 "interface_id": "JIRA ID",
 "description": "Description",
-"protocol": "Protocol",
+"data_entity": "Protocol",
 "reverse_flow":"reverse_flow"
 }   

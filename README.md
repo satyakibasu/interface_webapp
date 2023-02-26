@@ -3,6 +3,8 @@ This version has the following changes:
 V9.1
 ----
 1. Changed the font "arial" to "Arial". There was a compability issue using python 3.9
+2. Replace the "protocol" with "data_entity". This will now store data entities being transferred in the interface
+3. Updated the default_mapping.json with the above 
 
 V9.0
 ----

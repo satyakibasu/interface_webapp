@@ -140,16 +140,15 @@ class DrawInterfaceCatalogue:
         
         
         #Step 4: This checks if there are any inputs to the main data flow
+        #self._check_input_to_group_new()
         self._check_input_to_group_new()
-  
         
         #Step 5: This reduces the gap occured due to the input boxes to the main flow
         # This can be optional
         self._reduce_gap_between_boxes()
-        #self._reduce_gap()
-                
+        #self._reduce_gap()        
         self._reduce_gap_group()
-       
+        
         #Step 6: Set other main co-ordinates
         self._set_other_coordinates(flag="O") #'O' other optional co-ordinates
         
@@ -441,6 +440,7 @@ class DrawInterfaceCatalogue:
 
     def _check_input_to_group_new(self):
             cord_df = self._cord_df
+
             for name, group in cord_df.groupby('data_flow_group_name'):
     
              filter_input = group['input_to_main_flow']=='Y'
@@ -593,9 +593,9 @@ class DrawInterfaceCatalogue:
             _cord_df['interface_id_x'] = _cord_df['from_x0'] + self.width_of_rec + 10
             _cord_df['interface_id_y'] = _cord_df['from_y0'] + self.height_of_rec/2 - 15
             
-            #set the protocol co-ordinates
-            _cord_df['protocol_x'] = _cord_df['from_x0'] + self.width_of_rec + 10
-            _cord_df['protocol_y'] = _cord_df['from_y0'] + self.height_of_rec/2 + 10
+            #set the data_entity co-ordinates
+            _cord_df['data_entity_x'] = _cord_df['from_x0'] + self.width_of_rec + 10
+            _cord_df['data_entity_y'] = _cord_df['from_y0'] + self.height_of_rec/2 + 10
             
             '''
             #set the desc co-ordinates
@@ -682,7 +682,7 @@ class DrawInterfaceCatalogue:
         from_sys = row['from_node']
         to_sys = row['to_node']
         interface_id = row['interface_id']
-        protocol = row['protocol']
+        data_entity = row['data_entity']
         #description = row['description']
         from_node_id = row['from_node_id']
         to_node_id = row['to_node_id']
@@ -717,8 +717,8 @@ class DrawInterfaceCatalogue:
         interface_id_x = row['interface_id_x']
         interface_id_y = row['interface_id_y']
     
-        protocol_x = row['protocol_x']
-        protocol_y = row['protocol_y']
+        data_entity_x = row['data_entity_x']
+        data_entity_y = row['data_entity_y']
     
         #description_x = row['description_x']
         #description_y = row['description_y']
@@ -771,8 +771,8 @@ class DrawInterfaceCatalogue:
         #JIRA No
         self.draw.text((interface_id_x, interface_id_y), interface_id, fill=self.text_color,font=box_font)
         
-        #Protocol
-        self.draw.text((protocol_x, protocol_y), protocol, fill=self.text_color,font=box_font)
+        #Data Entity
+        self.draw.text((data_entity_x, data_entity_y), data_entity, fill=self.text_color,font=box_font)
         
         #Description
         #draw.text((description_x, description_y), description, fill=(0,255,0))
@@ -791,7 +791,7 @@ class DrawInterfaceCatalogue:
     
         
 if __name__ == "__main__":
-    file = 'files/test.csv'
+    file = 'files/all_patterns.csv'
     group = ""
     config = "config/default_config.json"
     mapping = "mapping/default_mapping.json"
@@ -803,6 +803,8 @@ if __name__ == "__main__":
     #image = obj.draw_image(coordinates)
     image = obj.draw_image()
     cordinates = obj._cord_df
+    #print(cordinates[["from_node","from_x0","from_y0","from_x1","from_y1","to_node","to_x0","to_y0","to_x1","to_y1"]])       
+
     #cordinates.to_csv("cord_new.csv")
 
     image.show()
