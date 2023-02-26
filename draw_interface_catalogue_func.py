@@ -61,7 +61,7 @@ def generate_diagram(row, draw):
     from_sys = row['from_node']
     to_sys = row['to_node']
     jira = row['interface_id']
-    protocol = row['protocol']
+    data_entity = row['data_entity']
     #description = row['description']
     from_narid = row['from_node_id']
     to_narid = row['to_node_id']
@@ -94,8 +94,8 @@ def generate_diagram(row, draw):
     jira_x = row['jira_x']
     jira_y = row['jira_y']
 
-    protocol_x = row['protocol_x']
-    protocol_y = row['protocol_y']
+    data_entity_x = row['data_entity_x']
+    data_entity_y = row['data_entity_y']
 
     #description_x = row['description_x']
     #description_y = row['description_y']
@@ -157,8 +157,8 @@ def generate_diagram(row, draw):
     #JIRA No
     draw.text((jira_x, jira_y), jira, fill=(0,255,0))
     
-    #Protocol
-    draw.text((protocol_x, protocol_y), protocol, fill=(0,255,0))
+    #Data Entity
+    draw.text((data_entity_x, data_entity_y), data_entity, fill=(0,255,0))
     
     #Description
     #draw.text((description_x, description_y), description, fill=(0,255,0))
@@ -570,9 +570,9 @@ def set_other_coordinates(df, flag='M'):
         cord_df['jira_x'] = cord_df['from_x0'] + width_of_rec + 10
         cord_df['jira_y'] = cord_df['from_y0'] + height_of_rec/2 - 15
         
-        #set the protocol co-ordinates
-        cord_df['protocol_x'] = cord_df['from_x0'] + width_of_rec + 10
-        cord_df['protocol_y'] = cord_df['from_y0'] + height_of_rec/2 + 10
+        #set the data_entity co-ordinates
+        cord_df['data_entity_x'] = cord_df['from_x0'] + width_of_rec + 10
+        cord_df['data_entity_y'] = cord_df['from_y0'] + height_of_rec/2 + 10
         
         '''
         #set the desc co-ordinates
@@ -630,7 +630,7 @@ def main(file,group):
     date_string = now.strftime('%Y-%m-%d')
     
     #get the mappping document
-    with open("mapping/mapping.json") as fp:
+    with open("mapping/default_mapping.json") as fp:
         mapping_dict = json.load(fp)
 
     
