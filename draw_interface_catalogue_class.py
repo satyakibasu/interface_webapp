@@ -772,7 +772,7 @@ class DrawInterfaceCatalogue:
         self.draw.text((interface_id_x, interface_id_y), interface_id, fill=self.text_color,font=box_font)
         
         #Data Entity
-        self.draw.text((data_entity_x, data_entity_y), data_entity, fill=self.text_color,font=box_font)
+        self.draw.text((data_entity_x, data_entity_y), "["+data_entity+"]", fill=self.text_color,font=box_font)
         
         #Description
         #draw.text((description_x, description_y), description, fill=(0,255,0))
