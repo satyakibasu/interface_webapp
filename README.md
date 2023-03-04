@@ -5,6 +5,8 @@ V9.1
 1. Changed the font "arial" to "Arial". There was a compability issue using python 3.9
 2. Replace the "protocol" with "data_entity". This will now store data entities being transferred in the interface
 3. Updated the default_mapping.json with the above 
+4. Changed the app.py file to include a random number for the images. This does not take the image from browser cache now.
+5. Included a new file 'fileintegrity' to check if an existing image is there in the directory based on a sha256 check
 
 V9.0
 ----

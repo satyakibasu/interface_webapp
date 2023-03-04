@@ -3,6 +3,8 @@ from flask import Flask,request,render_template, redirect, url_for
 from draw_interface_catalogue_class import DrawInterfaceCatalogue
 import os
 import pandas as pd
+import fileintegrity as fi
+import random
 
 #from google.cloud import storage
 #from PIL import Image
@@ -12,6 +14,11 @@ import pandas as pd
 
 app = Flask(__name__,static_url_path='/static')
 
+for file_name in os.listdir(os.getcwd()+'/static/images/'):
+    # construct full file path
+    file = os.getcwd()+ '/static/images/'+ file_name
+    print('Deleting file:', file)
+    os.remove(file)
 
 @app.route('/')
 def main():
@@ -71,13 +78,11 @@ def display():
                 #image.show()
                 cwd = os.getcwd()
                 if group:
-                    image_name = f_name+"_"+group+".png"
+                    image_name = f_name+"_"+group+"_"+str(random.random())+".png"
                 else:
-                    image_name = f_name+".png"
-                print(image_name)  
+                    image_name = f_name+"_"+str(random.random())+".png"
+                print(image_name)
                 image.save(cwd+"/static/images/"+image_name)
-                
-                
                 files = os.listdir(cwd+'/files')
                 return render_template("list.html",files=files, image_name = image_name)
         except:
